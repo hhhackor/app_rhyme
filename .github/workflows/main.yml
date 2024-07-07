@@ -213,6 +213,9 @@ jobs:
           $env:APK_SIGN_PWD="${{ secrets.APK_SIGN_PWD }}"
           $env:APK_SIGN_ALIAS="${{ secrets.APK_SIGN_ALIAS }}"
           $env:APK_SIGN_JKS="${{ secrets.APK_SIGN_JKS }}"
+          echo "APK_SIGN_PWD length: $($env:APK_SIGN_PWD.Length)"
+          echo "APK_SIGN_ALIAS length: $($env:APK_SIGN_ALIAS.Length)"
+          echo "APK_SIGN_JKS length: $($env:APK_SIGN_JKS.Length)"
         shell: pwsh
 
       - name: Write signing properties
